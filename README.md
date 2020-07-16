@@ -1,5 +1,5 @@
 # ubuntu-node-server
-Scripts to easily set up an apache -> node reverse proxy with cerbot
+A set of Linux shell scripts to setup an apache2 reverse proxy server. There is also functionality to add Certbot SSL certificates. 
 
 # Initialization
 #### NOTE: There is a prompt to press <kbd>enter</kbd> when installing Certbot
