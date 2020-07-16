@@ -10,11 +10,6 @@ a2enmod ssl
 a2enmod proxy
 a2enmod proxy_http
 
-# Installing NodeJs and relevant packages
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-apt install -y nodejs
-npm install -g pm2
-
 # Installing Certbot
 wget https://dl.eff.org/certbot-auto -O /usr/sbin/certbot-auto
 chmod a+x /usr/sbin/certbot-auto
