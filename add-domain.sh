@@ -13,7 +13,7 @@ RewriteRule ^(.*) http://localhost:'$2'/$1 [P]'  | tee -a /var/www/$1/.htaccess 
 
 # Creating VirtualHost entry
 echo '
-<Directory /var/www/'$1'>
+<Directory /var/www/'$1'/>
 Options Indexes FollowSymLinks
 AllowOverride All
 Require all granted
@@ -21,7 +21,8 @@ Require all granted
 
 <VirtualHost *:80>
 ServerName '$1'
-DocumentRoot "/var/www/'$1'"
+ServerAlias www.'$1'
+DocumentRoot "/var/www/'$1'/"
 </VirtualHost>' | tee -a /etc/apache2/apache2.conf > /dev/null
 
 systemctl restart apache2
